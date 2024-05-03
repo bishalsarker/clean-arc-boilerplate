@@ -1,13 +1,33 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace EMess.Domain.Entities
 {
-    public class BaseEntity
+    public abstract class BaseEntity<T> : IEntity
     {
-        public Guid Id { get; set; }
+        [Required]
+        public T Id { get; set; } = default!;
+
+        object IEntity.Id
+        {
+            get { return Id; }
+            set { }
+        }
+
+        [Required]
+        public string CreatedBy { get; set; } = default!;
+
+        [Required]
+        public DateTime CreatedOnUtc { get; set; }
+
+        public string LastModifiedBy { get; set; } = default!;
+
+        public DateTime? LastModifiedOnUtc { get; set; }
+
+        public bool IsDeleted { get; set; }
+
+        public BaseEntity()
+        {
+
+        }
     }
 }

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace EMess.Infrastructure.Constants
+﻿namespace EMess.Shared.Constants
 {
     public class TableConstants
     {
@@ -16,5 +10,8 @@ namespace EMess.Infrastructure.Constants
         public const string RoleClaims = "RoleClaims";
         public const string UserClaims = "UserClaims";
         public const string UserLogins = "UserLogins";
+
+        // Products
+        public const string Products = "Products";
     }
 }

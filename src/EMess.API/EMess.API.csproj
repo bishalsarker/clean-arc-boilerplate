@@ -15,13 +15,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\EMess.Application\EMess.Application.csproj" />
     <ProjectReference Include="..\EMess.Domain\EMess.Domain.csproj" />
     <ProjectReference Include="..\EMess.Infrastructure\EMess.Infrastructure.csproj" />
+    <ProjectReference Include="..\EMess.Shared\EMess.Shared.csproj" />
   </ItemGroup>
 
 </Project>

@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using System.Data.SqlClient;
 using Dapper;
 using System.Data;
+using Npgsql;
 
 namespace EMess.Infrastructure.Persistence
 {
@@ -24,7 +25,7 @@ namespace EMess.Infrastructure.Persistence
 
         public async Task<IEnumerable<T>> GetMultiple(string query, object param)
         {
-            using (var connection = new SqlConnection(_context.Database.GetConnectionString()))
+            using (var connection = new NpgsqlConnection(_context.Database.GetConnectionString()))
             {   
                 return await connection.QueryAsync<T>(query, param);
             }
@@ -32,7 +33,7 @@ namespace EMess.Infrastructure.Persistence
 
         public async Task<T> GetSingle(string query, object param)
         {
-            using (var connection = new SqlConnection(_context.Database.GetConnectionString()))
+            using (var connection = new NpgsqlConnection(_context.Database.GetConnectionString()))
             {
                 return (await connection.QueryFirstOrDefaultAsync<T>(query, param)) ?? default!;
             }
@@ -57,9 +58,10 @@ namespace EMess.Infrastructure.Persistence
                 table.Remove(existing);
             }
         }
-        public async Task SaveAsync()
+        public async Task<bool> SaveAsync()
         {
-            await _context.SaveChangesAsync();
+            var affectedRows = await _context.SaveChangesAsync();
+            return affectedRows > 0 ? true : false;
         }
     }
 }

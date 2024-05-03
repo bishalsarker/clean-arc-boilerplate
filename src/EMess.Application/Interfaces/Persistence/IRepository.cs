@@ -7,6 +7,6 @@
         Task InsertAsync(T obj);
         void Update(T obj);
         void Delete(object id);
-        Task SaveAsync();
+        Task<bool> SaveAsync();
     }
 }

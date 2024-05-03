@@ -14,7 +14,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Folder", "Solution
 		..\Dockerfile = ..\Dockerfile
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EMess.API", "EMess.API\EMess.API.csproj", "{C9C22712-75F0-415E-98AE-7C9D1875F49C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EMess.API", "EMess.API\EMess.API.csproj", "{C9C22712-75F0-415E-98AE-7C9D1875F49C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EMess.Shared", "EMess.Shared\EMess.Shared.csproj", "{B1C0F6EC-9807-44D8-AEB1-0397BD57F082}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -38,6 +40,10 @@ Global
 		{C9C22712-75F0-415E-98AE-7C9D1875F49C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C9C22712-75F0-415E-98AE-7C9D1875F49C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C9C22712-75F0-415E-98AE-7C9D1875F49C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1C0F6EC-9807-44D8-AEB1-0397BD57F082}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1C0F6EC-9807-44D8-AEB1-0397BD57F082}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1C0F6EC-9807-44D8-AEB1-0397BD57F082}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1C0F6EC-9807-44D8-AEB1-0397BD57F082}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
